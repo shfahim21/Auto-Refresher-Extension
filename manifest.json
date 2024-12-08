@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Page Refresher",
+  "version": "1.0",
+  "description": "Automatically refreshes the current page after a specified time interval",
+  "permissions": ["activeTab", "storage", "scripting", "alarms"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon1.png",
+    "128": "icon2.png"
+  }
+}

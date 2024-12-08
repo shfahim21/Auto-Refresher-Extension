@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auto Refresher</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f2f5;
+      }
+      .container {
+        width: 220px;
+        background-color: white;
+
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+        padding: 24px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      h3 {
+        color: #00135d;
+        margin: 0;
+        font-size: 20px;
+      }
+      .input-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      label {
+        margin-bottom: 8px;
+        color: #333;
+        padding-left: 12px;
+      }
+      input {
+        width: 200px;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ddd;
+        border-radius: 100px; /* Full radius */
+        text-align: center;
+        font-size: 16px;
+      }
+      button {
+        width: 220px;
+        padding: 12px;
+        background-color: #00135d;
+        color: white;
+        border: none;
+        border-radius: 100px; /* Full radius */
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #3d53ad;
+      }
+      #countdown {
+        font-size: 18px;
+        font-weight: bold;
+        color: #555;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 100px; /* Full radius */
+      }
+      #status {
+        color: #666;
+        font-size: 14px;
+        padding: 8px;
+        border-radius: 100px; /* Full radius */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Auto Page Refresher</h3>
+      <div class="input-group">
+        <label for="minutes">Refresh interval (minutes):</label>
+        <input type="number" id="minutes" min="1" value="5" />
+      </div>
+      <button id="startRefresh">Start Refresh</button>
+      <button id="stopRefresh">Stop Refresh</button>
+      <div id="countdown">Next refresh: 00:00</div>
+      <div id="status"></div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
